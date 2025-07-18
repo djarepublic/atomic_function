@@ -1,0 +1,12 @@
+MANIFEST.in
+README.md
+pyproject.toml
+setup.cfg
+atomic_function.egg-info/PKG-INFO
+atomic_function.egg-info/SOURCES.txt
+atomic_function.egg-info/dependency_links.txt
+atomic_function.egg-info/top_level.txt
+atomic_function.egg-info/zip-safe
+atomic_functions/__init__.py
+atomic_functions/dos.py
+atomic_functions/small_function.py

@@ -1,0 +1,10 @@
+Metadata-Version: 2.4
+Name: atomic_function
+Version: 0.1.0
+Summary: "some desc"
+Home-page: "https://github.com/djarepublic/atomic_function"
+Author: "Daniil"
+Author-email: Daniil Chernyshov <danyogi2000@mail.com>
+Description-Content-Type: text/markdown
+
+This is a long description of my library.
