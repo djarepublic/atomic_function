@@ -33,13 +33,22 @@ def DOS(file, atom):
     dz2 = np.array([row[7] for row in mas])
     dxz = np.array([row[8] for row in mas])
     dx2y2 = np.array([row[9] for row in mas])
-    fy3x2 = np.array([row[10] for row in mas])
-    fxyz = np.array([row[11] for row in mas])
-    fyz2 = np.array([row[12] for row in mas])
-    fz3 = np.array([row[13] for row in mas])
-    fxz2 = np.array([row[14] for row in mas])
-    fzx2 = np.array([row[15] for row in mas])
-    fx3 = np.array([row[16] for row in mas])
+    try:
+        fy3x2 = np.array([row[10] for row in mas])
+        fxyz = np.array([row[11] for row in mas])
+        fyz2 = np.array([row[12] for row in mas])
+        fz3 = np.array([row[13] for row in mas])
+        fxz2 = np.array([row[14] for row in mas])
+        fzx2 = np.array([row[15] for row in mas])
+        fx3 = np.array([row[16] for row in mas])
+    except:
+        fy3x2 = np.linspace(0, 0, len(mas))
+        fxyz = np.linspace(0, 0, len(mas))
+        fyz2 = np.linspace(0, 0, len(mas))
+        fz3 = np.linspace(0, 0, len(mas))
+        fxz2 = np.linspace(0, 0, len(mas))
+        fzx2 = np.linspace(0, 0, len(mas))
+        fx3 = np.linspace(0, 0, len(mas))
     p = py + pz + px
     d = dxy + dyz + dz2 + dxz + dx2y2
     f = fy3x2 + fxyz + fyz2 + fz3 + fxz2 + fzx2 + fx3
