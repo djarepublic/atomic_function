@@ -10,8 +10,14 @@ def DOS(file, atom):
     line = 'ion ' + str(atom) 
     st_mas = []
     for i in range(len(lines)):
+        match = re.search(r'name="efermi">\s*([-+]?\d*\.?\d+)', line)
+
+        if match:
+            efermi = float(match.group(1))
+            print('efermi = ', efermi)  
+
         if line in lines[i]:
-            print(i)
+            # print(i)
             i = i + 2
             break
 
@@ -23,7 +29,7 @@ def DOS(file, atom):
         st_mas.append(numbers)
 
     mas = np.array(st_mas)
-    en  = np.array([row[0] for row in mas])
+    en  = np.array([row[0] for row in mas]) - efermi
     s = np.array([row[1] for row in mas])
     py = np.array([row[2] for row in mas])
     pz = np.array([row[3] for row in mas])

@@ -10,7 +10,7 @@ def DOS(file, atom):
     line = 'ion ' + str(atom) 
     st_mas = []
     for i in range(len(lines)):
-        match = re.search(r'name="efermi">\s*([-+]?\d*\.?\d+)', line)
+        match = re.search(r'name="efermi">\s*([-+]?\d*\.?\d+)', lines[i])
 
         if match:
             efermi = float(match.group(1))
